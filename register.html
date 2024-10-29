@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Maze Navigator - Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-content">
+        <h1>Money Maze Navigator</h1>
+        <div class="container">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="pincode">Pincode:</label>
+                <input type="text" id="pincode" name="pincode" required>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <div id="passwordStrength"></div> <!-- Password strength indicator -->
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <button type="submit">Register</button>
+            </form>
+            <p id="registrationStatus"></p> <!-- Registration status message -->
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>

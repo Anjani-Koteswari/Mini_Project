@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="summary.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            height: 100vh; /* Ensure full viewport height */
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .chart-container, .table-container {
+            flex: 1;
+            margin: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .chart-container {
+            max-width: 50%;
+        }
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        h1, h2 {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Summary</h1>
+    <div class="container">
+        <div class="chart-container">
+            <canvas id="chartCanvas"></canvas>
+        </div>
+        <div class="table-container">
+            <h2>Total Expenditures by Category</h2>
+            <table id="expenditureTable">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Items</th>
+                        <th>Total Amount (Rs)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be added dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
